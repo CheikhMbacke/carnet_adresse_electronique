@@ -1,3 +1,4 @@
+#include <stdio.h>
 #ifndef __CARNET__H__
 #define __CARNET__H__
 
@@ -34,4 +35,6 @@ void print_carnet(Carnet c);
 /*Trier le carnet par odre alphabetique*/
 void Tri_Alpha(Carnet *c);
 
+/*Sauvegarde de donnees*/
+void save_data(FILE *fic, char *nom,char* num);
 #endif
