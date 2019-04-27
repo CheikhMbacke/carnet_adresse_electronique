@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
     /**
      * Restaurer les donnees sauvegardes dans le carnet
     */
-    //restaure_data(FIC,&book);
+    restaure_data(FIC,&book);
     do
     {
         printf("/****************************************************/\n\tBienvenue dans votre carnet electronique\n/****************************************************/\n");
