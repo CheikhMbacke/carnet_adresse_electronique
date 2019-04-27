@@ -36,5 +36,10 @@ void print_carnet(Carnet c);
 void Tri_Alpha(Carnet *c);
 
 /*Sauvegarde de donnees*/
-void save_data(FILE *fic, char *nom,char* num);
+void save_data(FILE *fic,Carnet c);
+int is_empty_file(FILE *file);
+/**
+ * Restaurer les donnees dans le carnet
+*/
+void restaure_data(FILE *fic, Carnet *c);
 #endif
