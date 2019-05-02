@@ -4,7 +4,7 @@
 #include "../include/carnet.h"
 
 /**
- * Instancier une personne
+* Instancier une personne
 */
   P create_person(char *name, char *num,P p){
     P person;
@@ -17,7 +17,7 @@
     return person;
 }
 /**
- * Afficher le nom et le numero d'une personne
+* Afficher le nom et le numero d'une personne
 */
 void print_person(Personne p){
     printf("Nom complet: %s\n",p.nom);
@@ -25,14 +25,14 @@ void print_person(Personne p){
     //printf("suivant: %p\n",p.next);
 }
 /**
- * Initialiser le compteur du carnet
+* Initialiser le compteur du carnet
 */
 void init_carnet(Carnet *c){
      c->compteur = 0;
 }
 
 /**
- * Enregistrer une personne dans le carnet
+* Enregistrer une personne dans le carnet
 */
 void add_person(Carnet *c,P p){
     if(c->compteur == 0)
@@ -42,7 +42,7 @@ void add_person(Carnet *c,P p){
 }
 
 /**
- * Afficher les enregistrements du carnet
+* Afficher les enregistrements du carnet
 */
 void print_carnet(Carnet c){
     if((c.compteur) == 0){
@@ -55,29 +55,26 @@ void print_carnet(Carnet c){
     }   
 }
 
- /* /*Trier le carnet par odre alphabetique*/
+/**
+* Trier le carnet par odre alphabetique
+*/
 void Tri_Alpha(Carnet *c){
     int i,j;//INDICE DE PARCOURS DU TABLEAU,
     P cle = malloc(sizeof(Personne)); //variable tampon
 
     for(i = 1; i < c->compteur; i++)
     {
-        //strcpy(cle,c->Tab[i].nom);
         *cle = c->Tab[i];
         j = i-1;
         while(j>=0 && (strcmp(c->Tab[j].nom,cle->nom) > 0)){
-            /* strcpy(c->Tab[j+1].nom,c->Tab[j].nom);
-            strcpy(c->Tab[j+1].numero,c->Tab[j].numero); */
             c->Tab[j+1] = c->Tab[j];
             j--;
         }
-        /* strcpy(c->Tab[j+1].nom,cle);
-        strcpy(c->Tab[j+1].numero,c->Tab[i].numero); */
         c->Tab[j+1] = *cle;
     }
 } 
 /**
- * Trier le carnet par odre alphabetique
+* Trier le carnet par odre alphabetique
 */
 /* void Tri_Alpha(Carnet *c){
     int i = 0,test;
@@ -101,7 +98,7 @@ void Tri_Alpha(Carnet *c){
 }  */
 
 /**
- * Sauvegarde de donnees
+* Sauvegarde de donnees
 */
 void save_data(FILE *fic,Carnet c){
 
@@ -112,7 +109,7 @@ void save_data(FILE *fic,Carnet c){
     fclose(fic);
 }
 /**
- * Restaurer les donnees dans le carnet
+* Restaurer les donnees dans le carnet
 */
 int is_empty_file(FILE *file){
     char caractere;
@@ -144,13 +141,13 @@ void restaure_data(FILE *fic, Carnet *c){
     if (is_empty_file(fic)) {
         rewind(fic);
         while(1){
+                if (feof(fic) == 1)
+                 return;
                 //printf("taille:%d",lenght_file(fic));
                 fscanf(fic,"%s %s",nom,num);
                 person = create_person(nom,num,person);
                 add_person(c,person);
-            if (feof(fic))
-                return;
-        
+                //printf("feof = %d\n",feof(fic));
         }
     free(nom);
     free(num);

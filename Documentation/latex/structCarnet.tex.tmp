@@ -1,0 +1,27 @@
+\hypertarget{structCarnet}{}\section{Carnet Struct Reference}
+\label{structCarnet}\index{Carnet@{Carnet}}
+
+
+{\ttfamily \#include $<$carnet.\+h$>$}
+
+
+
+Collaboration diagram for Carnet\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structCarnet_a331510749974e3df9a0ba275e6d3c1e3}\label{structCarnet_a331510749974e3df9a0ba275e6d3c1e3}} 
+\hyperlink{structPersonne}{P} {\bfseries Tab}
+\item 
+\mbox{\Hypertarget{structCarnet_a72ead524f9f41f5b4eb9211314924056}\label{structCarnet_a72ead524f9f41f5b4eb9211314924056}} 
+int {\bfseries compteur}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure carnet 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/cheikh/\+Documents/\+T\+P\+\_\+\+C/\+Projet/carnet\+\_\+adresse\+\_\+electronique/include/carnet.\+h\end{DoxyCompactItemize}

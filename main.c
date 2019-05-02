@@ -30,7 +30,6 @@ int main(int argc, char const *argv[])
                 printf("Entrer le nom et le numero du contact a enregistrer\n");
                 scanf("%s %s",nom,num);
                 p = create_person(nom,num,p);
-                //print_person(*p);
                 add_person(&book,p);
                 printf("Enregistrement reussi\n");
                 break;
@@ -43,7 +42,6 @@ int main(int argc, char const *argv[])
                 }
                 label:
                 print_carnet(book);
-                /* printf("Book print\n"); */
                 break;
             }
             case 3:
